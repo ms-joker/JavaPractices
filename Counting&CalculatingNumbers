@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class MyClass {
+    public static void main(String args[]) {
+      int sum = 0,
+      positive =0,
+      negative =0,
+      counter =0;
+      Scanner input = new Scanner(System.in);
+      
+      System.out.println("Enter a number: ");
+      int n = input.nextInt();
+      while (n!=0){
+          sum += n;
+          if (n<0){
+              negative ++;
+          }else{
+              positive ++;
+          }
+          counter ++;
+          System.out.println("Enter a number:n");
+          n = input.nextInt();
+      }
+      
+      double av = sum/counter;
+      
+      System.out.println("The number of positive is: " + positive);
+      System.out.println("The number of negative is: " + negative);
+      System.out.println("The total is: " + sum);
+      System.out.println("The average is: " + av);
+      
+      
+      
+    }
+}

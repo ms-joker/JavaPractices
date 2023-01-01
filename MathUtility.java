@@ -1,5 +1,8 @@
 package utilities;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+
 public class MathUtility {
     public static int sum(int num1, int num2) {
         return num1 + num2;
@@ -34,7 +37,7 @@ public class MathUtility {
     }
 
     public static boolean isOdd(int num) {
-        return (num%2!=0);
+        return (num % 2 != 0);
     }
 
     public static boolean isEven(int num) {
@@ -71,6 +74,36 @@ public class MathUtility {
 
     public static double cube(double num) {
         return num * num * num;
+    }
+
+    public static boolean isPrime(int n) {
+        int a = (int) Math.pow(n, 0.5);
+
+        for (int i = 2; i <= a; i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+
+
+    }
+
+    public static ArrayList<Integer> primeFactors(int n) {
+
+        ArrayList<Integer> nums = new ArrayList<>();
+
+        for (int i = 2; i < n; i++) {
+            while (n % i == 0) {
+                nums.add(i);
+                n /= i;
+            }
+
+        }
+        if (n>2) nums.add(n);
+        return nums;
+
+
     }
 
 }

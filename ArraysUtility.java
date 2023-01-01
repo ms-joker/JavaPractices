@@ -1,8 +1,6 @@
 package utilities;
 
-import day26_CustomMethodsPractice.FrequencyOfElement;
-
-import java.util.Arrays;
+import JavaMain.day26_CustomMethodsPractice.FrequencyOfElement;
 
 public class ArraysUtility {
 
